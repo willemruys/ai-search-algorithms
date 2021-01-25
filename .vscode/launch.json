@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BFS",
+            "request": "launch",
+            "mainClass": "breadthFirstSearch.BFS",
+            "projectName": "breadth-first-search-algorithm_c35ade8c"
+        },
+        {
+            "type": "java",
+            "name": "Launch IDSearch",
+            "request": "launch",
+            "mainClass": "IterativeDeepeninig.IDSearch",
+            "projectName": "breadth-first-search-algorithm_c35ade8c"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
