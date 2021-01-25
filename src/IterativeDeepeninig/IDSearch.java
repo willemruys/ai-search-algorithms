@@ -60,7 +60,6 @@ public class IDSearch {
 
     public boolean isNotATraficJam(int[][] grid, SearchNode node) {
         return (grid[node.getX()][node.getY()] != 1);
-
     }
 
     public boolean depthLimitedSearch(int limit, int[][] grid, SearchNode goalNode) {
@@ -80,6 +79,7 @@ public class IDSearch {
                         System.out.println("goal node found: " + node.toString());
                         return true;
                     }
+
                     if (isNotATraficJam(grid, node)) {
                         stack.push(node);
                     }
