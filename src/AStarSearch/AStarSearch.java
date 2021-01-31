@@ -98,11 +98,26 @@ public class AStarSearch {
         return position;
     }
 
+    public static int[] findStartNodePosition(int[][] grid) {
+        int[] position = null;
+
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                if (grid[i][j] == 3) {
+                    position = new int[] { i, j };
+                }
+            }
+
+        }
+
+        return position;
+    }
+
     public static void main(String args[]) throws Exception {
 
         int[][] grid = new int[][] { { 3, 0, 0, 0, 0 }, { 0, 1, 0, 1, 0 }, { 0, 0, 0, 1, 0 }, { 0, 1, 0, 1, 0 },
                 { 0, 0, 0, 2, 0 }, };
-        int[] startPostion = new int[] { 0, 0 };
+        int[] startPostion = findStartNodePosition(grid);
         int[] goalPosition = findGoalNodePosition(grid);
         StarNode startNode = new StarNode(startPostion);
         StarNode goalNode = new StarNode(goalPosition);
