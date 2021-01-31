@@ -1,4 +1,4 @@
-package IterativeDeepeninig;
+package IterativeDeepening;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

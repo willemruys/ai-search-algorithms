@@ -1,10 +1,10 @@
-package IterativeDeepeninig;
+package IterativeDeepening;
 
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
 
-import IterativeDeepeninig.test.TestGrid;
+import IterativeDeepening.test.TestGrid;
 
 public class IDSearch {
 

@@ -1,4 +1,4 @@
-package IterativeDeepeninig.test;
+package IterativeDeepening.test;
 
 public class TestGrid {
 
