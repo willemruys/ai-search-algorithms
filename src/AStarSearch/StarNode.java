@@ -28,7 +28,7 @@ public class StarNode {
     @Override
     public String toString() {
 
-        return "x: (" + this.x[0] + "," + this.x[1] + ") " + this.parent;
+        return "(" + this.x[0] + "," + this.x[1] + ") " + "Parent: " + this.parent;
     }
 
 }
