@@ -142,9 +142,45 @@ public class ForwardChaining {
         System.out.println("Model exists: " + modelExists);
     }
 
+    public static void setupConfig(ForwardChaining fc) {
+
+        // Clause: customer can add at most one cpu, 
+        fc.addClause(new int[] { -1, -2 });
+        // at most one ram, 
+        fc.addClause(new int[] { -3, -4 });
+        // at most one disk
+        fc.addClause(new int[] { -5, -6 });
+        // at most one case
+        fc.addClause(new int[] { -10, -11 });
+
+        // Clause: GPU => CPU1
+        fc.addClause(new int[] { -9, 2 });
+        // Clause: CPU2 => Hot1
+        fc.addClause(new int[] { -2, 7 });
+        // Clause: CPU1 and RAM2 => Hot1
+        fc.addClause(new int[] { -1, -4, 7 });
+        // Clause: GPU => hot2
+        fc.addClause(new int[] { -9, 8 });
+        // Clause: Disk2 => hot2
+        fc.addClause(new int[] { -6, 8 });
+        // Clause: hot1 /\ hot2 => case2
+        fc.addClause(new int[] { -7, -8, 11 });
+        // Clause: ram2 /\ disk 2 => case2
+        fc.addClause(new int[] { -3, -6, 11 });
+
+    }
+
     public static void main(String[] args) {
 
-        wumpus();
+        ForwardChaining fc = new ForwardChaining();
+
+        setupConfig(fc);
+
+        fc.addClause(new int[] { 1 });
+        fc.addClause(new int[] { 4 });
+        fc.addClause(new int[] { 9 });
+        fc.addClause(new int[] { 10 });
+        System.out.println("Model exists: " + fc.forwardChaining(11));
 
     }
 
