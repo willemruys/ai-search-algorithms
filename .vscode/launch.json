@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ForwardChaining",
+            "request": "launch",
+            "mainClass": "Inference.ForwardChaining",
+            "projectName": "breadth-first-search-algorithm_c35ade8c"
+        },
+        {
+            "type": "java",
             "name": "Launch AStarSearch",
             "request": "launch",
             "mainClass": "AStarSearch.AStarSearch",
